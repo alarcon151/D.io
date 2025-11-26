@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Desire's Rental & Gown Shop</title>
+<style>
+/* Basic Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e91e63; /* pink nav links */
+  font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color:palevioletred; /* pink */
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero-section .button {
+  background-color: #ff1493;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Collections Styles */
+.collections {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.collections h2 {
+  margin-bottom: 10px; /* Reduced margin */
+  font-size: 1.5em; /* Adjusted font size */
+  color: #222; /* Dark color for heading */
+}
+
+.collections p {
+  font-size: 0.9em;
+  color: #666; /* Gray color for description */
+  margin-bottom: 20px; /* Added margin */
+}
+
+.collections-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.collection-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.collection-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Featured Gowns Styles */
+.gown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gown-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+  padding: 15px;
+  text-align: center;
+}
+
+.gown-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.gown-type {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.gown-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.gown-price {
+  font-size: 1em;
+  color: #555;
+}
+
+/* About Us Styles */
+.about-us {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* Contact Us Styles */
+.contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #3e8e41;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8em;
+  color: #777;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Desire's Rental & Gown Shop</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collect.html">Collection</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+</nav>
+  <!-- About Us -->
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>The website is all about selling and renting gowns for various occasions like weddings, birthdays, school events, uniforms for school or work, and etc.</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section>
+    <h2>Have Some Any Question?</h2>
+
+    <div class="contact-info">
+      <h2>Contact Us:</h2>
+      <p><strong>Phone Number:</strong> 09655162621</p>
+      <p><strong>Email:</strong> <a href="mailto:alarcondesiree966@gmail.com">alarcondesiree966@gmail.com</a></p>
+      <p><strong>Address:</strong> Purok 8 Baclayon Bacacay Albay Philippines</p>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="copyright">
+      ©2025-Desire's Rental & Gown Shop
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
